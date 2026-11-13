@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pond</title>
+
+    <style>
+        :root {
+            --body-bg-image: url('https://sadhost.neocities.org/images/tiles/starbub2.gif');
+            --content: #43256E;
+        }
+
+        @font-face {
+            font-family: Nunito;
+            src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: Nunito;
+            src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+            font-weight: bold;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            background-color: #08031A;
+            background-image: var(--body-bg-image);
+            color: #fceaff;
+        }
+
+        /* MAIN CONTAINER */
+
+        #container {
+            width: min(1200px, calc(100% - 32px));
+            margin: 19px auto;
+        }
+
+        #container a {
+            color: #ED64F5;
+            font-weight: bold;
+        }
+
+        /* NAVIGATION */
+
+        #navbar {
+            margin-bottom: 10px;/*!!! */
+            border-radius: 25px;/*!!! */
+            width: 100%;
+            background-color: #13092D;
+        }
+
+        #navbar ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            margin: 0;
+            list-style: none;
+        }
+
+        #navbar li {
+            padding: 5px 10px;
+        }
+
+        #navbar li a {
+            color: #ED64F5;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        #navbar li a:hover {
+            color: #a49cba;
+            text-decoration: underline;
+        }
+
+        #navbar a.active {
+            border-bottom: 3px solid #ED64F5;
+        }
+
+        /* MAIN LAYOUT */
+
+        #flex {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            width: 100%;
+        }
+
+        main {
+            
+            border-radius: 25px;/*!!! */
+            background-color: #43256E;
+            flex: 1;
+            min-width: 0;
+            padding: 20px;
+        }
+
+        aside {
+            border-radius: 25px;/*!!! */
+            background-color: #241445;
+            width: 370px;
+            flex-shrink: 0;
+            padding: 20px;
+            font-size: smaller;
+        }
+
+        h1, h2, h3 {
+            color: #ED64F5;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        strong {
+            color: #ED64F5;
+        }
+
+        /* VIDEO EMBED */
+
+        main iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 960 / 715;
+            height: auto;
+            border: none;
+        }
+
+        /* TWITCH CHAT */
+
+        #rightSidebar iframe {
+            display: block;
+            width: 100%;
+            height: 750px;
+            border: none;
+        }
+
+        /* OTHER ELEMENTS */
+
+        .box {
+            background-color: #13092D;
+            border: 1px solid #ED64F5;
+            padding: 10px;
+        }
+
+        footer {
+            border-radius: 25px;/*!!! */
+            background-color: #13092D;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #topBar {
+            width: 100%;
+            min-height: 30px;
+            padding: 10px;
+            font-size: smaller;
+            background-color: #13092D;
+        }
+
+        /* TABLETS */
+
+        @media screen and (max-width: 900px) {
+            #container {
+                width: calc(100% - 24px);
+            }
+
+            #flex {
+                flex-wrap: wrap;
+            }
+
+            main {
+                flex: 1 1 100%;
+                order: 1;
+            }
+
+            aside {
+                width: 100%;
+                flex: 1 1 100%;
+                order: 2;
+            }
+
+            #rightSidebar iframe {
+                height: 550px;
+            }
+        }
+
+        /* MOBILE PHONES */
+
+        @media screen and (max-width: 600px) {
+            #container {
+                width: calc(100% - 16px);
+                margin: 8px auto;
+            }
+
+            #navbar ul {
+                justify-content: center;
+                gap: 5px;
+                padding: 8px 4px;
+            }
+
+            #navbar li {
+                padding: 8px 10px;
+            }
+
+            #navbar li a {
+                font-size: 14px;
+            }
+
+            main {
+                padding: 12px;
+            }
+
+            aside {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            main iframe {
+                aspect-ratio: 16 / 9;
+            }
+
+            #rightSidebar iframe {
+                height: 500px;
+            }
+        }
+
+        /* VERY SMALL PHONES */
+
+        @media screen and (max-width: 380px) {
+            #navbar li {
+                padding: 6px;
+            }
+
+            #navbar li a {
+                font-size: 12px;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            #rightSidebar iframe {
+                height: 420px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="headerArea">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="https://kick.com/ooofs" target="_blank" rel="noopener noreferrer">Kick Page</a></li>
+                    <li><a href="https://www.youtube.com/@ooofs" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="">Merch</a></li>
+                    <li><a href="">Discord</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="flex">
+
+            <main>
+                <h1>Stream</h1>
+
+                <!-- YOUTUBE STREAM EMBED -->
+                <iframe
+                    src="https://www.youtube.com/embed/live_stream?channel=UCWSHBMUF2F5CE1Fo5Wxt0zw"
+                    title="YouTube live stream"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </main>
+
+            <aside id="rightSidebar">
+                <h2>Chat</h2>
+
+                <!-- TWITCH CHAT EMBED -->
+                <iframe
+                    id="twitch-chat-embed"
+                    src="https://www.twitch.tv/embed/purplemoongamer/chat?darkpopout&parent=localhost&parent=127.0.0.1"
+                    title="Twitch chat">
+                </iframe>
+            </aside>
+
+        </div>
+
+        <footer id="footer" style="margin-top: 10px;">Made by PurpleMoonGamer, last updated  11/12/2026</footer>
+    </div>
+
+
+
+</body>
+</html>
